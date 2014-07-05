@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+		<title>Your New Application</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<style type="text/css">
+			/* Prevent copy paste for all elements except text fields */
+			*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+			input, textarea  { -webkit-user-select:text; }
+		</style>
+		<script src="intelxdk.js"></script>
+		<script type="text/javascript">
+			/* This code is used to run as soon as Intel activates */
+			var onDeviceReady=function(){
+			//hide splash screen
+			intel.xdk.device.hideSplashScreen();
+			};
+			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+		</script>
+		<script type="application/javascript" src="js/jquery.min.js"></script>
+		<script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+		<script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+		<script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+		<script type="application/javascript" src="sidebar/js/swipe.js"></script>
+		<script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+         $(document).ready(function(e) {
+          var open=true;
+          $('.menucont').click(function(){
+         	 if(parseInt($('.menucont').css('margin-left'))>20){
+         		 open=false;
+         	 }else{
+         		 open=true;
+         	 }
+         	 if(open){
+         		$('#slideBar').animate({left: "0px"}, 200);
+         		$('.menucont').animate({marginLeft: "230px"}, 200);
+				$('.grid.uib_row_1').animate({marginLeft: "230px"}, 200);
+         		open=false;
+         	 }else{
+         		$('#slideBar').animate({left: "-230px"}, 200);
+         		$('.menucont').animate({marginLeft: "0px"}, 200);
+				$('.grid.uib_row_1').animate({marginLeft: "0px"}, 200);
+         		open=true;
+         	 }
+          });
+		  $('.btn').click(function(e) {
+			  $('.carplate').val('');
+			  $('.comment').val('');
+            alert('Thank you. Your data has been sent successfully.');
+			
+          });
+		  $('.hotelOptions input').click(function(e) {
+			 if($(this).attr('id')=='rdBomas'){
+			   $('#boma').show();
+			   $('#redcourt').hide();
+			 }else{
+			    $('#boma').hide();
+			    $('#redcourt').show();
+			 }
+			
+          });
+		 });
+	</script>
+	</head>
+
+	<body>
+		<!-- content goes here-->
+		<div class="uwrap">
+			<div class="upage" id="mainpage">
+				<div class="upage-outer">
+				<div class="uib-header header-bg container-group inner-element uib_w_17" data-uib="layout/header" data-ver="0">
+						<h2>Book Hotel</h2>
+						<div class="widget-container wrapping-col single-centered">
+							<div class="widget uib_w_18 scale-image d-margins" data-uib="media/img" data-ver="0">
+								<figure class="figure-align">
+									<img>
+
+									<figcaption data-position="bottom"></figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="widget-container content-area horiz-area wrapping-col left"></div>
+						<div class="widget-container content-area horiz-area wrapping-col right"></div>
+					</div>
+					
+
+					<div class="upage-content" id="mainsub">
+                    <!-- menucont -->
+                      <div class="menucont">
+                      <div class="menuIcon">
+                         <i></i>
+                         <i></i>
+                         <i></i>
+                      </div>
+                      <!-- /.menuIcon-->
+                   </div>
+                   <!-- /.menucont -->
+
+						<div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+							<div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+								<div class="widget-container content-area vertical-col">
+
+									<fieldset class="widget uib_w_17 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="0" data-child-name="bs-radio-group-0">
+										
+								   <div class="hotelOptions">
+										<label class="radio widget uib_w_20" data-uib="twitter%20bootstrap/radio_button" data-ver="0">
+											<input type="radio" id="rdBomas" name="bs-radio-group-0">Boma Hotel</label>
+											<label class="radio widget uib_w_18" data-uib="twitter%20bootstrap/radio_button" data-ver="0">
+											<input type="radio" id="rdRedCourt" name="bs-radio-group-0">Red Court Hotel</label>
+                                     </div>
+										<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
+										<label class="narrow-control label-inline">Branch</label>
+									</div>
+										<div class="select widget uib_w_20" data-uib="twitter%20bootstrap/radio_button" data-ver="0">
+										<select id="boma" class="wide-control form-control carplate">
+										<option>The Boma Nairobi</option>
+										<option>Boma Inn Nairobi</option>
+										</select>
+										
+										<select style="display:none" id="redcourt" class="wide-control form-control carplate">
+										
+										<option>Nairobi</option>
+										<option>Nyeri</option>
+										<option>Eldoret</option>
+										<option>Mombasa</option>
+										<option>Kisumu</option>
+									
+										</select>
+										
+										</div>
+										
+									</fieldset>
+									<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
+										<label class="narrow-control label-inline">Name</label>
+									</div>
+									<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
+										<input class="wide-control form-control carplate" type="text">
+									</div>
+									<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
+										<label class="narrow-control label-inline">Phone Number</label>
+										
+									</div>
+									<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
+										
+										<input class="wide-control form-control carplate" type="text">
+									</div>
+									<div class="table-thing widget uib_w_22 d-margins" data-uib="twitter%20bootstrap/input" data-ver="0">
+										<label class="narrow-control label-inline">Etc..</label>
+										
+									</div>
+									<div class="table-thing widget uib_w_23 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="0">
+										<label class="narrow-control label-inline">Comment</label>
+									</div>
+									<div class="table-thing widget uib_w_23 d-margins" data-uib="twitter%20bootstrap/text_area" data-ver="0">
+										<textarea rows="4" class="wide-control form-control comment"></textarea>
+									</div>
+									<button type="button" class="btn widget uib_w_24 d-margins btn-primary" data-uib="twitter%20bootstrap/button" data-ver="0"><i class="glyphicon button-icon-left" data-position="left"></i>Send</button><span class="uib_shim"></span>
+								</div>
+							</div>
+							<span class="uib_shim"></span>
+						</div>
+					</div>
+					<!-- /upage-content -->
+
+					<div class="inner-element uib_w_7 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'push', 'v':230, 'side':'left', 'dur':200}" id="slideBar">
+						<div class="sidebar-content">
+
+							<div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+								<div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+									<div class="widget-container content-area vertical-col">
+
+										<div class="list-group widget uib_w_12 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="0">
+											<a class="list-group-item allow-badge widget uib_w_13" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="index.html">
+												<p class="list-group-item-text">Home</p>
+											</a>
+											<a class="list-group-item allow-badge widget uib_w_14" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="report.html">
+												<p class="list-group-item-text">Report</p>
+											</a>
+											<a class="list-group-item allow-badge widget uib_w_16 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="eplus.html">
+												<p class="list-group-item-text">E-Plus</p>
+											</a>
+											<a class="list-group-item allow-badge widget uib_w_15" data-uib="twitter%20bootstrap/list_item" data-ver="0" href="book-hotel.html">
+												<p class="list-group-item-text">Book Hotel</p>
+											</a>
+										</div><span class="uib_shim"></span>
+									</div>
+								</div>
+								<span class="uib_shim"></span>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /upage-outer -->
+
+			</div>
+			<!-- /upage -->
+
+		</div>
+		<!-- /uwrap -->
+	</body>
+
+</html>

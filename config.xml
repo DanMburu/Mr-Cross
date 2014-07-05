@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "mrcross.app"
+        version   = "1.1.0">
+    <name>m-drive</name>
+
+    <description>
+	For a long time in Kenya, road accident, fire, flood, terror and other emergencies that require quick response from emergency companies take a long time before they are reported by the victims or witness. This leads to loss of lives that could be saved if these emergencies were reported on time. On the other hand, only few individuals and organization stand to benefit from the available services and products from Red Cross Kenya as they are not aware of their availability and how they can access them. Available services from Boma hotel, red Court Hotels, E-Plus and others would be made more available to the general public by use of a proposed mobile application, “MR-Cross” 
+    </description>
+
+    <author href="http://kendevs.com" email="dmgitau@gmail.com">
+        MR-Cross
+    </author>
+   
+	
+	
+   
+	
+	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<feature name="http://api.phonegap.com/1.0/network"/>
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
+	
+    
+
+    <!--
+    <gap:splash src="res/screen/android/icon-36-ldpi.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/icon-48-mdpi"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/icon-72-hdpi.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	-->
+	
+	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
+	<gap:plugin name="com.badrit.calendar" />
+	<gap:plugin name="nl.x-services.plugins.calendar" />
+     <access origin="*"/>
+</widget>
