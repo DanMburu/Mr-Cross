@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "mrcross.app"
         version   = "1.1.0">
-    <name>m-drive</name>
+    <name>Mr-Cross</name>
 
     <description>
 	For a long time in Kenya, road accident, fire, flood, terror and other emergencies that require quick response from emergency companies take a long time before they are reported by the victims or witness. This leads to loss of lives that could be saved if these emergencies were reported on time. On the other hand, only few individuals and organization stand to benefit from the available services and products from Red Cross Kenya as they are not aware of their availability and how they can access them. Available services from Boma hotel, red Court Hotels, E-Plus and others would be made more available to the general public by use of a proposed mobile application, “MR-Cross” 
