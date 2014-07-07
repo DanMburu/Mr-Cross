@@ -1,0 +1,21 @@
+.center > img {
+  width: 48px;
+}
+.center {
+  text-align: center;
+  width: 100%;
+}
+.header-bg {
+  background-color: #ee1a26;
+ 
+}
+.btn-primary {
+  background-color: #ee1a26;
+  border-color: #ee1a26;
+  color: #ffffff;
+}
+h2, .h2 {
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
